@@ -314,9 +314,7 @@ def main(argv: List[str] = sys.argv[1:]) -> int:
         ki_footprint = ExporterFootprintKicad(footprint=easyeda_footprint)
         footprint_filename = f"{easyeda_footprint.info.name}.kicad_mod"
         footprint_path = f"{arguments['output']}.pretty"
-        model_3d_path = f"{arguments['output']}.3dshapes".replace("\\", "/").replace(
-            "./", "/"
-        )
+        model_3d_path = f"{arguments['output']}.3dshapes".replace("\\", "/")
 
         if arguments.get("use_default_folder"):
             model_3d_path = "${EASYEDA2KICAD}/easyeda2kicad.3dshapes"
